@@ -1,0 +1,92 @@
+---
+import Base from '../layouts/Base.astro';
+import BookingCTA from '../components/BookingCTA.astro';
+
+const title = 'Violoniste Mariage Alger — Moncef Benouniche | Devis gratuit';
+const description =
+  'Violoniste pour mariages à Alger : entrée des mariés, vin d’honneur, soirée. Classique, moderne & international. Premier Prix, Conservatoire d’El Biar. Devis gratuit : 0556 72 89 33.';
+
+const faq = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Quel est le prix d’un violoniste pour un mariage à Alger ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sur devis selon durée, lieu et répertoire. Appelez le 0556 72 89 33 pour un devis gratuit et rapide.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Peut-on choisir les morceaux (entrée des mariés, ouverture de bal) ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Oui — répertoire classique, moderne et international, construit avec vous avant le jour J.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Combien de temps à l’avance réserver ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Le plus tôt possible en saison des mariages — la date est bloquée à la confirmation. Appelez pour vérifier une disponibilité.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Vous déplacez-vous hors d’Alger ?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Oui, partout en Algérie — déplacement sur devis.' },
+    },
+  ],
+};
+
+const crumbs = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.ohala.qd.je/' },
+    { '@type': 'ListItem', position: 2, name: 'Violoniste mariage Alger', item: 'https://www.ohala.qd.je/violoniste-mariage-alger/' },
+  ],
+};
+---
+<Base title={title} description={description} path="/violoniste-mariage-alger/">
+  <script type="application/ld+json" set:html={JSON.stringify(faq)} />
+  <script type="application/ld+json" set:html={JSON.stringify(crumbs)} />
+  <main class="wrap">
+    <div class="hero">
+      <p class="eyebrow">MARIAGES À ALGER</p>
+      <h1>Violoniste pour <em>mariages à Alger</em></h1>
+      <div class="rule"></div>
+      <p class="lede">
+        Entrée des mariés, vin d’honneur, soirée : un violon live qui rend le jour J inoubliable.
+        Classique, moderne et international — Premier Prix, Conservatoire d’El Biar.
+      </p>
+      <BookingCTA />
+    </div>
+    <section class="block">
+      <h2><span class="n">01 ·</span> Les moments couverts</h2>
+      <div class="grid">
+        <div class="card"><h3>Cérémonie &amp; entrée</h3><p>Le morceau que vous avez choisi, joué en live à votre arrivée.</p></div>
+        <div class="card"><h3>Vin d’honneur</h3><p>Ambiance élégante pendant photos et cocktail.</p></div>
+        <div class="card"><h3>Soirée</h3><p>Sets modernes et internationaux pour faire danser vos invités.</p></div>
+      </div>
+    </section>
+    <section class="block">
+      <h2><span class="n">02 ·</span> Comment réserver</h2>
+      <div class="grid">
+        <div class="card"><h3>1. Appel</h3><p>Date, lieu, ambiance souhaitée — 0556 72 89 33.</p></div>
+        <div class="card"><h3>2. Devis gratuit</h3><p>Setlist construite avec vous, tarif clair.</p></div>
+        <div class="card"><h3>3. Jour J</h3><p>Installation discrète, performance live.</p></div>
+      </div>
+      <BookingCTA />
+      <dl class="faq">
+        <dt>Quel est le prix ?</dt><dd>Sur devis — durée, lieu, répertoire. Devis gratuit au 0556 72 89 33.</dd>
+        <dt>Peut-on choisir les morceaux ?</dt><dd>Oui, classique, moderne et international.</dd>
+        <dt>Quand réserver ?</dt><dd>Au plus tôt en saison — la date est bloquée à la confirmation.</dd>
+        <dt>Hors Alger ?</dt><dd>Oui, partout en Algérie, déplacement sur devis.</dd>
+      </dl>
+    </section>
+  </main>
+</Base>

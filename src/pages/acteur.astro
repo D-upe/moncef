@@ -1,0 +1,44 @@
+---
+import Base from '../layouts/Base.astro';
+import BookingCTA from '../components/BookingCTA.astro';
+
+const title = 'Acteur Algérien & Créateur UGC — Moncef Benouniche (Série FATMA)';
+const description =
+  'Moncef Benouniche, acteur : série FATMA de Djaffar Gacem, projets cinéma en cours. Créateur UGC : Macir Vie, Barbacane, Leopard. Contact castings & collabs : 0556 72 89 33.';
+
+const crumbs = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.ohala.qd.je/' },
+    { '@type': 'ListItem', position: 2, name: 'Acteur', item: 'https://www.ohala.qd.je/acteur/' },
+  ],
+};
+---
+<Base title={title} description={description} path="/acteur/">
+  <script type="application/ld+json" set:html={JSON.stringify(crumbs)} />
+  <main class="wrap">
+    <div class="hero">
+      <p class="eyebrow">ÉCRAN — ALGER</p>
+      <h1>Acteur <em>&amp; créateur UGC</em></h1>
+      <div class="rule"></div>
+      <p class="lede">
+        Série « FATMA » de Djaffar Gacem, projets cinématographiques en cours.
+        Collaborations UGC : Macir Vie, Barbacane, Leopard.
+      </p>
+      <BookingCTA />
+    </div>
+    <section class="block">
+      <h2><span class="n">01 ·</span> À l’écran</h2>
+      <div class="grid">
+        <div class="card"><h3>Série FATMA</h3><p>Participation à la série de Djaffar Gacem.</p></div>
+        <div class="card"><h3>Cinéma</h3><p>Projets en cours de réalisation.</p></div>
+        <div class="card"><h3>UGC &amp; marques</h3><p>Macir Vie, Barbacane, Leopard.</p></div>
+      </div>
+      <p style="color: var(--silver); margin-top: 1.25rem;">
+        Castings, rôles, collaborations marques : contact direct ci-dessous.
+      </p>
+      <BookingCTA />
+    </div>
+  </main>
+</Base>
