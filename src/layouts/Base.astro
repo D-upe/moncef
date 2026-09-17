@@ -1,0 +1,145 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  path?: string;
+  noindex?: boolean;
+}
+const { title, description, path = '/', noindex = false } = Astro.props;
+const site = Astro.site?.toString().replace(/\/$/, '') ?? 'https://www.ohala.qd.je';
+const canonical = `${site}${path}`;
+const phoneIntl = '+213556728933';
+const instagram = 'https://www.instagram.com/violoniste_moncef';
+const email = 'moncef.benouniche@gmail.com';
+
+const musicianJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': ['Musician', 'LocalBusiness'],
+  '@id': `${site}/#musician`,
+  name: 'Moncef Benouniche',
+  alternateName: 'Moncef — Violoniste à Alger',
+  description:
+    'Violoniste professionnel à Alger (Premier Prix, Conservatoire d’El Biar). Mariages, événements privés et séminaires. Professeur de violon (YAMAHA Algérie, MELTIN ART). Acteur — série FATMA.',
+  url: site,
+  telephone: phoneIntl,
+  email,
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Alger',
+    addressCountry: 'DZ',
+  },
+  areaServed: ['Alger', 'Algérie'],
+  priceRange: 'Sur devis',
+  sameAs: [instagram],
+  knowsLanguage: ['fr', 'ar', 'en'],
+};
+---
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <meta name="theme-color" content="#0A0A0B" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_DZ" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <script type="application/ld+json" set:html={JSON.stringify(musicianJsonLd)} />
+    <style>
+      :root {
+        --black: #0a0a0b; --coal: #141416; --cream: #f4f1ea;
+        --gold: #c9a96a; --gold-soft: #e4cf9e; --silver: #c0c0c0;
+        --delft: #1b3a5d; --burgundy: #8e1e2e;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0; background: var(--black); color: var(--cream);
+        font-family: Georgia, 'Times New Roman', serif; line-height: 1.7;
+      }
+      body, p, li, a.tel { font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; }
+      h1, h2, h3, .serif { font-family: Georgia, 'Times New Roman', serif; }
+      a { color: var(--gold); }
+      .wrap { max-width: 1080px; margin: 0 auto; padding: 0 1.25rem; }
+      header.top {
+        position: sticky; top: 0; z-index: 50;
+        background: rgba(10, 10, 11, 0.92); backdrop-filter: blur(8px);
+        border-bottom: 1px solid #2a2a2e;
+      }
+      nav.main { display: flex; align-items: center; gap: 1.25rem; padding: 0.9rem 0; }
+      nav.main .brand { color: var(--cream); text-decoration: none; letter-spacing: 0.04em; }
+      nav.main .brand b { color: var(--gold); font-weight: 600; }
+      nav.main .links { margin-left: auto; display: flex; gap: 1rem; font-size: 0.9rem; }
+      nav.main .links a { color: var(--silver); text-decoration: none; }
+      nav.main .links a:hover { color: var(--gold-soft); }
+      .hero { padding: 4.5rem 0 3rem; text-align: center; }
+      .eyebrow { letter-spacing: 0.35em; font-size: 0.72rem; color: var(--gold); }
+      h1 { font-size: clamp(2.2rem, 5.5vw, 3.6rem); font-weight: 400; line-height: 1.15; margin: 1rem 0; }
+      h1 em { color: var(--gold); }
+      .rule { width: 72px; height: 2px; background: var(--gold); margin: 1.5rem auto; }
+      .lede { max-width: 46rem; margin: 0 auto; color: var(--silver); }
+      .cta-row { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-top: 1.75rem; }
+      .btn {
+        display: inline-block; padding: 0.8rem 1.4rem; border-radius: 999px;
+        text-decoration: none; font-weight: 600; font-size: 0.95rem;
+      }
+      .btn-gold { background: var(--gold); color: #111; }
+      .btn-ghost { border: 1px solid var(--gold); color: var(--gold-soft); }
+      section.block { padding: 2.75rem 0; border-top: 1px solid #232326; }
+      h2 { font-weight: 400; font-size: clamp(1.5rem, 3.5vw, 2.1rem); margin: 0 0 0.5rem; }
+      h2 .n { color: var(--gold); }
+      .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 1.25rem; }
+      .card { background: var(--coal); border: 1px solid #2a2a2e; border-radius: 14px; padding: 1.25rem; }
+      .card h3 { margin: 0 0 0.4rem; font-size: 1.05rem; color: var(--gold-soft); }
+      .card p { margin: 0; color: var(--silver); font-size: 0.92rem; }
+      .proof { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-top: 1.5rem; }
+      .proof span { border: 1px solid #33333a; color: var(--silver); border-radius: 999px; padding: 0.3rem 0.8rem; font-size: 0.8rem; }
+      .faq dt { color: var(--gold-soft); margin-top: 1rem; font-weight: 600; }
+      .faq dd { margin: 0.25rem 0 0; color: var(--silver); }
+      footer { border-top: 1px solid #232326; padding: 2rem 0 6rem; color: var(--silver); font-size: 0.9rem; }
+      .sticky-call {
+        position: fixed; left: 1rem; right: 1rem; bottom: 1rem; z-index: 60;
+        display: block; text-align: center; background: var(--gold); color: #111;
+        border-radius: 999px; padding: 0.9rem; font-weight: 700; text-decoration: none;
+      }
+      @media (min-width: 720px) { .sticky-call { display: none; } footer { padding-bottom: 2rem; } }
+    </style>
+  </head>
+  <body>
+    <header class="top">
+      <div class="wrap">
+        <nav class="main" aria-label="Navigation principale">
+          <a class="brand serif" href="/">Moncef <b>Benouniche</b></a>
+          <div class="links">
+            <a href="/violoniste-mariage-alger/">Mariage</a>
+            <a href="/violoniste-evenements-alger/">Événements</a>
+            <a href="/professeur-violon-alger/">Cours</a>
+            <a href="/acteur/">Acteur</a>
+            <a href="/#contact">Contact</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <slot />
+    <footer>
+      <div class="wrap">
+        <p class="serif" style="color: var(--cream); font-size: 1.1rem;">Moncef Benouniche — Violoniste · Professeur · Acteur — Alger</p>
+        <p>
+          Tél : <a class="tel" href="tel:+213556728933">0556 72 89 33</a> ·
+          Email : <a href="mailto:moncef.benouniche@gmail.com">moncef.benouniche@gmail.com</a> ·
+          Instagram : <a href="https://www.instagram.com/violoniste_moncef" rel="me noopener"> @violoniste_moncef</a>
+        </p>
+        <p>Dossier : <a href="/dossier/cv-moncef-benouniche.pdf">CV (PDF)</a></p>
+      </div>
+    </footer>
+    <a class="sticky-call" href="tel:+213556728933">Appeler le violoniste — 0556 72 89 33</a>
+  </body>
+</html>

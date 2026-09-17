@@ -1,0 +1,117 @@
+---
+import Base from '../layouts/Base.astro';
+import BookingCTA from '../components/BookingCTA.astro';
+
+const title = 'Violoniste à Alger — Moncef Benouniche | Mariages, Événements, Cours';
+const description =
+  'Moncef Benouniche, violoniste professionnel à Alger (Premier Prix, Conservatoire d’El Biar). Mariages, événements privés et séminaires. Professeur de violon YAMAHA Algérie & MELTIN ART. Acteur — série FATMA. Devis : 0556 72 89 33.';
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Quel est le prix d’un violoniste pour un mariage à Alger ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Le tarif dépend de la durée, du lieu et du répertoire (classique, moderne, international). Demandez un devis gratuit au 0556 72 89 33 — réponse rapide.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Proposez-vous des cours de violon à Alger pour débutants ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Oui — cours pour enfants et adultes, tous niveaux, chez YAMAHA Algérie, MELTIN ART et à domicile, avec suivi des objectifs.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Dans quelles langues communiquez-vous ?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Français, arabe et anglais — idéal pour mariages mixtes et événements internationaux.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Vous déplacez-vous hors d’Alger ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Oui, déplacements en Algérie pour mariages et événements — frais de déplacement sur devis.',
+      },
+    },
+  ],
+};
+---
+<Base title={title} description={description} path="/">
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <main class="wrap">
+    <div class="hero">
+      <p class="eyebrow">VIOLONISTE · PROFESSEUR · ACTEUR — ALGER</p>
+      <h1>Moncef Benouniche, <em>violoniste à Alger</em></h1>
+      <div class="rule"></div>
+      <p class="lede">
+        Premier Prix de musique classique (Conservatoire d’El Biar, 2011–2024). Prestations pour
+        mariages, événements privés et séminaires — répertoire classique, moderne et international.
+        Professeur chez YAMAHA Algérie &amp; MELTIN ART. Acteur (série FATMA).
+      </p>
+      <BookingCTA />
+      <div class="proof" aria-label="Références">
+        <span>Opéra d’Alger</span><span>TEDx Algiers</span><span>Union Européenne</span>
+        <span>YAMAHA Algérie</span><span>MELTIN ART</span><span>Série FATMA</span>
+      </div>
+    </div>
+
+    <section class="block" id="violoniste" aria-labelledby="t-violoniste">
+      <h2 id="t-violoniste"><span class="n">01 ·</span> Violoniste pour vos événements</h2>
+      <p style="color: var(--silver); max-width: 46rem;">
+        Mariages, fiançailles, galas, séminaires : une performance live qui élève l’ambiance —
+        du classique intemporel aux titres modernes et internationaux demandés par vos invités.
+      </p>
+      <div class="grid">
+        <div class="card"><h3>Mariages</h3><p>Entrée des mariés, vin d’honneur, soirée — set live sur mesure.</p></div>
+        <div class="card"><h3>Événements privés</h3><p>Anniversaires, fiançailles, dîners de gala à Alger et en Algérie.</p></div>
+        <div class="card"><h3>Séminaires &amp; institutionnel</h3><p>Opéra d’Alger, TEDx Algiers, Union Européenne — références vérifiables.</p></div>
+      </div>
+    </section>
+
+    <section class="block" id="cours" aria-labelledby="t-cours">
+      <h2 id="t-cours"><span class="n">02 ·</span> Cours de violon à Alger</h2>
+      <p style="color: var(--silver); max-width: 46rem;">
+        Enfants et adultes, tous niveaux : lecture de partitions, interprétation, performance scénique.
+        Suivi des objectifs et des résultats, en français, arabe ou anglais.
+      </p>
+      <div class="grid">
+        <div class="card"><h3>YAMAHA Algérie</h3><p>Enseignement en institution, programme structuré.</p></div>
+        <div class="card"><h3>MELTIN ART</h3><p>Ateliers et accompagnement artistique.</p></div>
+        <div class="card"><h3>À domicile</h3><p>Cours personnalisés à Alger, tous niveaux.</p></div>
+      </div>
+    </section>
+
+    <section class="block" id="acteur" aria-labelledby="t-acteur">
+      <h2 id="t-acteur"><span class="n">03 ·</span> Acteur &amp; créateur UGC</h2>
+      <p style="color: var(--silver); max-width: 46rem;">
+        Série « FATMA » de Djaffar Gacem, projets cinématographiques en cours.
+        Collaborations UGC : Macir Vie, Barbacane, Leopard.
+      </p>
+    </section>
+
+    <section class="block" id="contact" aria-labelledby="t-contact">
+      <h2 id="t-contact"><span class="n">04 ·</span> Booking &amp; contact</h2>
+      <p style="color: var(--silver); max-width: 46rem;">
+        Devis gratuit et disponibilités : appelez directement ou écrivez.
+        Réponse rapide pour mariages et événements datés.
+      </p>
+      <BookingCTA />
+      <dl class="faq">
+        <dt>Quel est le prix d’un violoniste pour un mariage à Alger ?</dt>
+        <dd>Sur devis selon durée, lieu et répertoire. Appelez le 0556 72 89 33 pour un devis gratuit.</dd>
+        <dt>Donnez-vous des cours débutants ?</dt>
+        <dd>Oui — enfants et adultes, tous niveaux, à domicile ou en institution.</dd>
+        <dt>Quelles langues parlez-vous ?</dt>
+        <dd>Français, arabe et anglais.</dd>
+        <dt>Vous déplacez-vous hors d’Alger ?</dt>
+        <dd>Oui, partout en Algérie — déplacement sur devis.</dd>
+      </dl>
+    </section>
+  </main>
+</Base>

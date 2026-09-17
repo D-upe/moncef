@@ -41,3 +41,7 @@ Thumbs.db
 # Uncomment if Figma exports get large:
 # exports/
 # *.psd
+
+# Local media originals (source of truth stays in Drive)
+originals/
+.astro/
