@@ -80,8 +80,12 @@ const musicianJsonLd = {
       nav.main .links { margin-left: auto; display: flex; gap: 1rem; font-size: 0.9rem; }
       nav.main .links a { color: var(--silver); text-decoration: none; }
       nav.main .links a:hover { color: var(--gold-soft); }
-      .hero { padding: 4.5rem 0 3rem; text-align: center; }
-      .ornament { display: inline-flex; align-items: center; gap: 0.5rem; justify-content: center; }
+       .hero { padding: 4.5rem 0 3rem; text-align: center; }
+       .hero-img { border-radius: 14px; overflow: hidden; border: 1px solid #2a2a2e; margin: 0 auto 1.5rem; max-width: 800px; }
+       .hero-img img { width: 100%; height: auto; display: block; aspect-ratio: 2 / 1; object-fit: cover; }
+       .hero-img img[loading="lazy"] { opacity: 0; transition: opacity 0.5s ease; }
+       .hero-img img.loaded { opacity: 1; }
+       .ornament { display: inline-flex; align-items: center; gap: 0.5rem; justify-content: center; }
       .ornament svg { width: 28px; height: 28px; }
       .ornament .bar { width: 3px; height: 16px; background: var(--gold); border-radius: 2px; }
       .ornament .bar:nth-child(2) { height: 24px; }
@@ -143,6 +147,10 @@ const musicianJsonLd = {
     </header>
     <slot />
     <script>
+      document.querySelectorAll('.hero-img img').forEach((img) => {
+        if (img.complete) img.classList.add('loaded');
+        else img.addEventListener('load', () => img.classList.add('loaded'));
+      });
       const obs = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {

@@ -1,6 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
 import BookingCTA from '../components/BookingCTA.astro';
+import ImageCard from '../components/ImageCard.astro';
+import VideoPlayer from '../components/VideoPlayer.astro';
 
 const title = 'Acteur Algérien & Créateur UGC — Moncef Benouniche (Série FATMA)';
 const description =
@@ -20,25 +22,31 @@ const crumbs = {
   <main class="wrap">
     <div class="hero">
       <p class="eyebrow">ÉCRAN — ALGER</p>
-      <h1>Acteur <em>&amp; créateur UGC</em></h1>
-      <div class="rule"></div>
-      <p class="lede">
+      <div class="hero-img reveal stagger-1"><img src="/media/pictures/hero-violin.svg" alt="Moncef Benouniche — Acteur" width="800" height="400" /></div>
+      <h1 class="reveal stagger-2">Acteur <em>&amp; créateur UGC</em></h1>
+      <div class="rule reveal stagger-3"></div>
+      <p class="lede reveal stagger-4">
         Série « FATMA » de Djaffar Gacem, projets cinématographiques en cours.
         Collaborations UGC : Macir Vie, Barbacane, Leopard.
       </p>
       <BookingCTA />
     </div>
     <section class="block">
-      <h2><span class="n">01 ·</span> À l’écran</h2>
-      <div class="grid">
-        <div class="card"><h3>Série FATMA</h3><p>Participation à la série de Djaffar Gacem.</p></div>
-        <div class="card"><h3>Cinéma</h3><p>Projets en cours de réalisation.</p></div>
-        <div class="card"><h3>UGC &amp; marques</h3><p>Macir Vie, Barbacane, Leopard.</p></div>
+      <h2><span class="n">01 ·</span> À l'écran</h2>
+      <div class="grid reveal stagger-1">
+        <div class="card"><img src="/media/pictures/card-placeholder.svg" alt="Série FATMA" width="400" height="250" /><h3>Série FATMA</h3><p>Participation à la série de Djaffar Gacem.</p></div>
+        <div class="card"><img src="/media/pictures/card-placeholder.svg" alt="Cinéma" width="400" height="250" /><h3>Cinéma</h3><p>Projets en cours de réalisation.</p></div>
+        <div class="card"><img src="/media/pictures/card-placeholder.svg" alt="UGC" width="400" height="250" /><h3>UGC &amp; marques</h3><p>Macir Vie, Barbacane, Leopard.</p></div>
       </div>
-      <p style="color: var(--silver); margin-top: 1.25rem;">
-        Castings, rôles, collaborations marques : contact direct ci-dessous.
-      </p>
+      <p style="color: var(--silver); margin-top: 1.25rem;">Castings, rôles, collaborations marques : contact direct ci-dessous.</p>
       <BookingCTA />
-    </div>
+    </section>
+    <section class="block">
+      <h2><span class="n">02 ·</span> Extraits &amp; captures</h2>
+      <div class="grid reveal stagger-2">
+        <div class="card"><VideoPlayer src="/media/videos/placeholder.mp4" poster="/media/pictures/video-thumb.svg" title="Extrait — Série FATMA" /></div>
+        <div class="card"><ImageCard src="/media/pictures/card-placeholder.svg" alt="Behind the scenes" width="400" height="250" /><h3>Behind the scenes</h3><p>Coulisses des tournages et des projets UGC.</p></div>
+      </div>
+    </section>
   </main>
 </Base>

@@ -1,0 +1,22 @@
+---
+const { src, alt, width = 400, height = 250 } = Astro.props;
+---
+<div class="img-card">
+  <img src={src} alt={alt} width={width} height={height} loading="lazy" />
+</div>
+
+<style>
+  .img-card {
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #2a2a2e;
+    background: var(--coal);
+  }
+  .img-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+  }
+</style>

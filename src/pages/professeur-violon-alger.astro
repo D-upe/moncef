@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import BookingCTA from '../components/BookingCTA.astro';
+import ImageCard from '../components/ImageCard.astro';
 
 const title = 'Cours de Violon Alger — Professeur YAMAHA & MELTIN ART | Moncef Benouniche';
 const description =
@@ -48,9 +49,10 @@ const crumbs = {
   <main class="wrap">
     <div class="hero">
       <p class="eyebrow">COURS — ALGER</p>
-      <h1>Cours de <em>violon à Alger</em></h1>
-      <div class="rule"></div>
-      <p class="lede">
+      <div class="hero-img reveal stagger-1"><img src="/media/pictures/hero-violin.svg" alt="Professeur de violon à Alger" width="800" height="400" /></div>
+      <h1 class="reveal stagger-2">Cours de <em>violon à Alger</em></h1>
+      <div class="rule reveal stagger-3"></div>
+      <p class="lede reveal stagger-4">
         Enfants et adultes, tous niveaux : lecture de partitions, interprétation, performance scénique.
         Professeur chez YAMAHA Algérie &amp; MELTIN ART — suivi des objectifs et des résultats.
       </p>
@@ -58,16 +60,19 @@ const crumbs = {
     </div>
     <section class="block">
       <h2><span class="n">01 ·</span> Où apprendre</h2>
-      <div class="grid">
-        <div class="card"><h3>YAMAHA Algérie</h3><p>Cours en institution, programme structuré.</p></div>
-        <div class="card"><h3>MELTIN ART</h3><p>Ateliers et accompagnement artistique.</p></div>
-        <div class="card"><h3>À domicile</h3><p>Cours personnalisés à Alger, tous niveaux.</p></div>
+      <div class="grid reveal stagger-1">
+        <div class="card"><img src="/media/pictures/card-placeholder.svg" alt="YAMAHA" width="400" height="250" /><h3>YAMAHA Algérie</h3><p>Cours en institution, programme structuré.</p></div>
+        <div class="card"><img src="/media/pictures/card-placeholder.svg" alt="MELTIN ART" width="400" height="250" /><h3>MELTIN ART</h3><p>Ateliers et accompagnement artistique.</p></div>
+        <div class="card"><img src="/media/pictures/card-placeholder.svg" alt="À domicile" width="400" height="250" /><h3>À domicile</h3><p>Cours personnalisés à Alger, tous niveaux.</p></div>
       </div>
       <BookingCTA />
-      <dl class="faq">
+    </section>
+    <section class="block">
+      <h2><span class="n">02 ·</span> Programme &amp; tarifs</h2>
+      <dl class="faq reveal stagger-2">
         <dt>Débutants acceptés ?</dt><dd>Oui, enfants et adultes, tous niveaux.</dd>
         <dt>Où ?</dt><dd>YAMAHA Algérie, MELTIN ART, domicile.</dd>
-        <dt>Faut-il un violon ?</dt><dd>Recommandé — conseils d’achat sur demande.</dd>
+        <dt>Faut-il un violon ?</dt><dd>Recommandé — conseils d'achat sur demande.</dd>
         <dt>Langues ?</dt><dd>Français, arabe, anglais.</dd>
       </dl>
     </section>

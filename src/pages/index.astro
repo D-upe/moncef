@@ -1,6 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
 import BookingCTA from '../components/BookingCTA.astro';
+import ImageCard from '../components/ImageCard.astro';
+import VideoPlayer from '../components/VideoPlayer.astro';
 
 const title = 'Violoniste à Alger — Moncef Benouniche | Mariages, Événements, Cours';
 const description =
@@ -41,6 +43,14 @@ const faqJsonLd = {
     },
   ],
 };
+
+const heroJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ImageObject',
+  contentUrl: 'https://www.ohala.qd.je/media/pictures/hero-violin.svg',
+  name: 'Moncef Benouniche — Violoniste à Alger',
+  description: 'Violoniste professionnel à Alger, Premier Prix Conservatoire d\'El Biar',
+};
 ---
 <Base title={title} description={description} path="/">
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
@@ -51,6 +61,9 @@ const faqJsonLd = {
         VIOLONISTE · PROFESSEUR · ACTEUR — ALGER
         <span class="ornament"><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span></span>
       </p>
+      <div class="hero-img reveal stagger-1">
+        <img src="/media/pictures/hero-violin.svg" alt="Moncef Benouniche — Violoniste à Alger" width="800" height="400" />
+      </div>
       <h1 class="reveal stagger-1">Moncef Benouniche, <em>violoniste à Alger</em></h1>
       <div class="rule reveal stagger-2"></div>
       <p class="lede reveal stagger-3">
@@ -60,7 +73,7 @@ const faqJsonLd = {
       </p>
       <div class="cta-row reveal stagger-4"><BookingCTA /></div>
       <div class="proof reveal stagger-5" aria-label="Références">
-        <span>Opéra d’Alger</span><span>TEDx Algiers</span><span>Union Européenne</span>
+        <span>Opéra d'Alger</span><span>TEDx Algiers</span><span>Union Européenne</span>
         <span>YAMAHA Algérie</span><span>MELTIN ART</span><span>Série FATMA</span>
       </div>
     </div>
@@ -68,13 +81,21 @@ const faqJsonLd = {
     <section class="block" id="violoniste" aria-labelledby="t-violoniste">
       <h2 id="t-violoniste"><span class="n">01 ·</span> Violoniste pour vos événements</h2>
       <p style="color: var(--silver); max-width: 46rem;">
-        Mariages, fiançailles, galas, séminaires : une performance live qui élève l’ambiance —
+        Mariages, fiançailles, galas, séminaires : une performance live qui élève l'ambiance —
         du classique intemporel aux titres modernes et internationaux demandés par vos invités.
       </p>
       <div class="grid reveal stagger-1">
-        <div class="card"><h3>Mariages</h3><p>Entrée des mariés, vin d’honneur, soirée — set live sur mesure.</p></div>
-        <div class="card"><h3>Événements privés</h3><p>Anniversaires, fiançailles, dîners de gala à Alger et en Algérie.</p></div>
-        <div class="card"><h3>Séminaires &amp; institutionnel</h3><p>Opéra d’Alger, TEDx Algiers, Union Européenne — références vérifiables.</p></div>
+        <div class="card"><img src="/media/pictures/card-placeholder.svg" alt="Mariages" width="400" height="250" /><h3>Mariages</h3><p>Entrée des mariés, vin d'honneur, soirée — set live sur mesure.</p></div>
+        <div class="card"><img src="/media/pictures/card-placeholder.svg" alt="Événements privés" width="400" height="250" /><h3>Événements privés</h3><p>Anniversaires, fiançailles, dîners de gala à Alger et en Algérie.</p></div>
+        <div class="card"><img src="/media/pictures/card-placeholder.svg" alt="Séminaires" width="400" height="250" /><h3>Séminaires &amp; institutionnel</h3><p>Opéra d'Alger, TEDx Algiers, Union Européenne — références vérifiables.</p></div>
+      </div>
+    </section>
+
+    <section class="block" id="video" aria-labelledby="t-video">
+      <h2 id="t-video"><span class="n">05 ·</span> En image &amp; en musique</h2>
+      <div class="grid reveal stagger-2">
+        <div class="card"><VideoPlayer src="/media/videos/placeholder.mp4" poster="/media/pictures/video-thumb.svg" title="Prestation — Opéra d'Alger" /></div>
+        <div class="card"><ImageCard src="/media/pictures/card-placeholder.svg" alt="Performance scénique" width="400" height="250" /><h3>Scènes majeures</h3><p>Opéra d'Alger, TEDx, Union Européenne — captations et live.</p></div>
       </div>
     </section>
 
@@ -85,9 +106,9 @@ const faqJsonLd = {
         Suivi des objectifs et des résultats, en français, arabe ou anglais.
       </p>
       <div class="grid reveal stagger-2">
-        <div class="card"><h3>YAMAHA Algérie</h3><p>Enseignement en institution, programme structuré.</p></div>
-        <div class="card"><h3>MELTIN ART</h3><p>Ateliers et accompagnement artistique.</p></div>
-        <div class="card"><h3>À domicile</h3><p>Cours personnalisés à Alger, tous niveaux.</p></div>
+        <div class="card"><img src="/media/pictures/card-placeholder.svg" alt="YAMAHA" width="400" height="250" /><h3>YAMAHA Algérie</h3><p>Enseignement en institution, programme structuré.</p></div>
+        <div class="card"><img src="/media/pictures/card-placeholder.svg" alt="MELTIN ART" width="400" height="250" /><h3>MELTIN ART</h3><p>Ateliers et accompagnement artistique.</p></div>
+        <div class="card"><img src="/media/pictures/card-placeholder.svg" alt="À domicile" width="400" height="250" /><h3>À domicile</h3><p>Cours personnalisés à Alger, tous niveaux.</p></div>
       </div>
     </section>
 
@@ -97,6 +118,14 @@ const faqJsonLd = {
         Série « FATMA » de Djaffar Gacem, projets cinématographiques en cours.
         Collaborations UGC : Macir Vie, Barbacane, Leopard.
       </p>
+      <div class="grid reveal stagger-1">
+        <div class="card"><img src="/media/pictures/card-placeholder.svg" alt="Série FATMA" width="400" height="250" /><h3>Série FATMA</h3><p>Participation à la série de Djaffar Gacem.</p></div>
+        <div class="card"><img src="/media/pictures/card-placeholder.svg" alt="Cinéma" width="400" height="250" /><h3>Cinéma</h3><p>Projets en cours de réalisation.</p></div>
+        <div class="card"><img src="/media/pictures/card-placeholder.svg" alt="UGC" width="400" height="250" /><h3>UGC &amp; marques</h3><p>Macir Vie, Barbacane, Leopard.</p></div>
+      </div>
+      <div class="reveal stagger-2" style="margin-top:1.25rem;">
+        <VideoPlayer src="/media/videos/placeholder.mp4" poster="/media/pictures/video-thumb.svg" title="Extrait — Série FATMA" />
+      </div>
     </section>
 
     <section class="block" id="contact" aria-labelledby="t-contact">
@@ -107,13 +136,13 @@ const faqJsonLd = {
       </p>
       <div class="reveal stagger-1"><BookingCTA /></div>
       <dl class="faq reveal stagger-2">
-        <dt>Quel est le prix d’un violoniste pour un mariage à Alger ?</dt>
+        <dt>Quel est le prix d'un violoniste pour un mariage à Alger ?</dt>
         <dd>Sur devis selon durée, lieu et répertoire. Appelez le 0556 72 89 33 pour un devis gratuit.</dd>
         <dt>Donnez-vous des cours débutants ?</dt>
         <dd>Oui — enfants et adultes, tous niveaux, à domicile ou en institution.</dd>
         <dt>Quelles langues parlez-vous ?</dt>
         <dd>Français, arabe et anglais.</dd>
-        <dt>Vous déplacez-vous hors d’Alger ?</dt>
+        <dt>Vous déplacez-vous hors d'Alger ?</dt>
         <dd>Oui, partout en Algérie — déplacement sur devis.</dd>
       </dl>
     </section>

@@ -1,10 +1,12 @@
 ---
 import Base from '../layouts/Base.astro';
 import BookingCTA from '../components/BookingCTA.astro';
+import ImageCard from '../components/ImageCard.astro';
+import VideoPlayer from '../components/VideoPlayer.astro';
 
 const title = 'Violoniste Mariage Alger — Moncef Benouniche | Devis gratuit';
 const description =
-  'Violoniste pour mariages à Alger : entrée des mariés, vin d’honneur, soirée. Classique, moderne & international. Premier Prix, Conservatoire d’El Biar. Devis gratuit : 0556 72 89 33.';
+  'Violoniste pour mariages à Alger : entrée des mariés, vin d\'honneur, soirée. Classique, moderne & international. Premier Prix, Conservatoire d\'El Biar. Devis gratuit : 0556 72 89 33.';
 
 const faq = {
   '@context': 'https://schema.org',
@@ -12,7 +14,7 @@ const faq = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Quel est le prix d’un violoniste pour un mariage à Alger ?',
+      name: 'Quel est le prix d\'un violoniste pour un mariage à Alger ?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Sur devis selon durée, lieu et répertoire. Appelez le 0556 72 89 33 pour un devis gratuit et rapide.',
@@ -28,7 +30,7 @@ const faq = {
     },
     {
       '@type': 'Question',
-      name: 'Combien de temps à l’avance réserver ?',
+      name: 'Combien de temps à l\'avance réserver ?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Le plus tôt possible en saison des mariages — la date est bloquée à la confirmation. Appelez pour vérifier une disponibilité.',
@@ -36,7 +38,7 @@ const faq = {
     },
     {
       '@type': 'Question',
-      name: 'Vous déplacez-vous hors d’Alger ?',
+      name: 'Vous déplacez-vous hors d\'Alger ?',
       acceptedAnswer: { '@type': 'Answer', text: 'Oui, partout en Algérie — déplacement sur devis.' },
     },
   ],
@@ -50,6 +52,7 @@ const crumbs = {
     { '@type': 'ListItem', position: 2, name: 'Violoniste mariage Alger', item: 'https://www.ohala.qd.je/violoniste-mariage-alger/' },
   ],
 };
+
 ---
 <Base title={title} description={description} path="/violoniste-mariage-alger/">
   <script type="application/ld+json" set:html={JSON.stringify(faq)} />
@@ -57,25 +60,26 @@ const crumbs = {
   <main class="wrap">
     <div class="hero">
       <p class="eyebrow">MARIAGES À ALGER</p>
-      <h1>Violoniste pour <em>mariages à Alger</em></h1>
-      <div class="rule"></div>
-      <p class="lede">
-        Entrée des mariés, vin d’honneur, soirée : un violon live qui rend le jour J inoubliable.
-        Classique, moderne et international — Premier Prix, Conservatoire d’El Biar.
+      <div class="hero-img reveal stagger-1"><img src="/media/pictures/hero-violin.svg" alt="Violoniste pour mariages à Alger" width="800" height="400" /></div>
+      <h1 class="reveal stagger-2">Violoniste pour <em>mariages à Alger</em></h1>
+      <div class="rule reveal stagger-3"></div>
+      <p class="lede reveal stagger-4">
+        Entrée des mariés, vin d'honneur, soirée : un violon live qui rend le jour J inoubliable.
+        Classique, moderne et international — Premier Prix, Conservatoire d'El Biar.
       </p>
       <BookingCTA />
     </div>
     <section class="block">
       <h2><span class="n">01 ·</span> Les moments couverts</h2>
-      <div class="grid">
-        <div class="card"><h3>Cérémonie &amp; entrée</h3><p>Le morceau que vous avez choisi, joué en live à votre arrivée.</p></div>
-        <div class="card"><h3>Vin d’honneur</h3><p>Ambiance élégante pendant photos et cocktail.</p></div>
-        <div class="card"><h3>Soirée</h3><p>Sets modernes et internationaux pour faire danser vos invités.</p></div>
+      <div class="grid reveal stagger-1">
+        <div class="card"><img src="/media/pictures/card-placeholder.svg" alt="Cérémonie" width="400" height="250" /><h3>Cérémonie &amp; entrée</h3><p>Le morceau que vous avez choisi, joué en live à votre arrivée.</p></div>
+        <div class="card"><img src="/media/pictures/card-placeholder.svg" alt="Vin d'honneur" width="400" height="250" /><h3>Vin d'honneur</h3><p>Ambiance élégante pendant photos et cocktail.</p></div>
+        <div class="card"><img src="/media/pictures/card-placeholder.svg" alt="Soirée" width="400" height="250" /><h3>Soirée</h3><p>Sets modernes et internationaux pour faire danser vos invités.</p></div>
       </div>
     </section>
     <section class="block">
       <h2><span class="n">02 ·</span> Comment réserver</h2>
-      <div class="grid">
+      <div class="grid reveal stagger-2">
         <div class="card"><h3>1. Appel</h3><p>Date, lieu, ambiance souhaitée — 0556 72 89 33.</p></div>
         <div class="card"><h3>2. Devis gratuit</h3><p>Setlist construite avec vous, tarif clair.</p></div>
         <div class="card"><h3>3. Jour J</h3><p>Installation discrète, performance live.</p></div>
