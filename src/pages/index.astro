@@ -46,16 +46,20 @@ const faqJsonLd = {
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <main class="wrap">
     <div class="hero">
-      <p class="eyebrow">VIOLONISTE · PROFESSEUR · ACTEUR — ALGER</p>
-      <h1>Moncef Benouniche, <em>violoniste à Alger</em></h1>
-      <div class="rule"></div>
-      <p class="lede">
+      <p class="eyebrow">
+        <span class="ornament"><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span></span>
+        VIOLONISTE · PROFESSEUR · ACTEUR — ALGER
+        <span class="ornament"><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span></span>
+      </p>
+      <h1 class="reveal stagger-1">Moncef Benouniche, <em>violoniste à Alger</em></h1>
+      <div class="rule reveal stagger-2"></div>
+      <p class="lede reveal stagger-3">
         Premier Prix de musique classique (Conservatoire d’El Biar, 2011–2024). Prestations pour
         mariages, événements privés et séminaires — répertoire classique, moderne et international.
         Professeur chez YAMAHA Algérie &amp; MELTIN ART. Acteur (série FATMA).
       </p>
-      <BookingCTA />
-      <div class="proof" aria-label="Références">
+      <div class="cta-row reveal stagger-4"><BookingCTA /></div>
+      <div class="proof reveal stagger-5" aria-label="Références">
         <span>Opéra d’Alger</span><span>TEDx Algiers</span><span>Union Européenne</span>
         <span>YAMAHA Algérie</span><span>MELTIN ART</span><span>Série FATMA</span>
       </div>
@@ -67,7 +71,7 @@ const faqJsonLd = {
         Mariages, fiançailles, galas, séminaires : une performance live qui élève l’ambiance —
         du classique intemporel aux titres modernes et internationaux demandés par vos invités.
       </p>
-      <div class="grid">
+      <div class="grid reveal stagger-1">
         <div class="card"><h3>Mariages</h3><p>Entrée des mariés, vin d’honneur, soirée — set live sur mesure.</p></div>
         <div class="card"><h3>Événements privés</h3><p>Anniversaires, fiançailles, dîners de gala à Alger et en Algérie.</p></div>
         <div class="card"><h3>Séminaires &amp; institutionnel</h3><p>Opéra d’Alger, TEDx Algiers, Union Européenne — références vérifiables.</p></div>
@@ -80,7 +84,7 @@ const faqJsonLd = {
         Enfants et adultes, tous niveaux : lecture de partitions, interprétation, performance scénique.
         Suivi des objectifs et des résultats, en français, arabe ou anglais.
       </p>
-      <div class="grid">
+      <div class="grid reveal stagger-2">
         <div class="card"><h3>YAMAHA Algérie</h3><p>Enseignement en institution, programme structuré.</p></div>
         <div class="card"><h3>MELTIN ART</h3><p>Ateliers et accompagnement artistique.</p></div>
         <div class="card"><h3>À domicile</h3><p>Cours personnalisés à Alger, tous niveaux.</p></div>
@@ -101,8 +105,8 @@ const faqJsonLd = {
         Devis gratuit et disponibilités : appelez directement ou écrivez.
         Réponse rapide pour mariages et événements datés.
       </p>
-      <BookingCTA />
-      <dl class="faq">
+      <div class="reveal stagger-1"><BookingCTA /></div>
+      <dl class="faq reveal stagger-2">
         <dt>Quel est le prix d’un violoniste pour un mariage à Alger ?</dt>
         <dd>Sur devis selon durée, lieu et répertoire. Appelez le 0556 72 89 33 pour un devis gratuit.</dd>
         <dt>Donnez-vous des cours débutants ?</dt>
