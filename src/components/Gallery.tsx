@@ -25,7 +25,7 @@ export default function Gallery() {
       ratio: "aspect-[16/10]",
     },
     {
-      src: "images/acting.jpg",
+      src: "images/acting.jpeg",
       alt: "",
       cat: 3,
       span: "lg:col-span-5",
@@ -39,7 +39,7 @@ export default function Gallery() {
       ratio: "aspect-[4/3]",
     },
     {
-      src: "images/hero.jpg",
+      src: "images/hero.webp",
       alt: "",
       cat: 5,
       video: "presentation.mp4",
@@ -47,7 +47,7 @@ export default function Gallery() {
       ratio: "aspect-[4/3]",
     },
     {
-      src: "images/event.jpg",
+      src: "images/event.webp",
       alt: "",
       cat: 2,
       video: "presentation.mp4",

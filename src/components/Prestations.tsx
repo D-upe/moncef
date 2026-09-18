@@ -1,7 +1,7 @@
 import { Eyebrow, Reveal, ArrowUpRight, GoldDiamond } from "./ui";
 import { useLang } from "../i18n";
 
-const IMGS = ["images/wedding.jpg", "images/event.jpg"];
+  const IMGS = ["images/wedding.jpg", "images/event.webp"];
 const RATIOS = ["aspect-[4/3]", "aspect-[4/5]"];
 const SPANS = ["lg:col-span-7", "lg:col-span-5"];
 const OFFSETS = ["", "lg:mt-16"];
@@ -101,7 +101,7 @@ export default function Prestations() {
           <figure className="group relative mt-7 overflow-hidden lg:mt-2">
             <div className="aspect-[16/10] w-full overflow-hidden sm:aspect-[21/9]">
               <img
-                src="images/hero.jpg"
+                src="images/hero.webp"
                 alt={c.prestations.bannerAlt}
                 loading="lazy"
                 className="h-full w-full object-cover object-[62%_42%] transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,0.61,0.36,1)] group-hover:scale-[1.04]"

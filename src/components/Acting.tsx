@@ -70,7 +70,7 @@ export default function Acting() {
             <figure className="group relative col-span-2 overflow-hidden sm:col-span-1">
               <div className="aspect-[3/4] w-full overflow-hidden">
                 <img
-                  src="images/acting.jpg"
+                  src="images/acting.jpeg"
                   alt={c.acting.imgAlt}
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-[1100ms] ease-[cubic-bezier(0.22,0.61,0.36,1)] group-hover:scale-[1.05]"

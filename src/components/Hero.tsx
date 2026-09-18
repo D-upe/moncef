@@ -52,7 +52,7 @@ export default function Hero() {
         className="absolute inset-0 will-change-transform"
       >
         <img
-          src="images/hero.jpg"
+          src="images/hero.webp"
           alt={c.hero.imgAlt}
           className="h-[112%] w-full object-cover object-[64%_center]"
           fetchPriority="high"
