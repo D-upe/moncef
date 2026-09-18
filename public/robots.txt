@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://ohala.qd.je/sitemap-index.xml
