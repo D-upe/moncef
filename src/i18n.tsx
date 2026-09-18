@@ -297,7 +297,7 @@ const fr = {
     whatsapp: "WhatsApp",
     role: "Violoniste · Professeur · Acteur",
     emailLabel: "E-mail",
-    email: "contact@moncefbenouniche.com",
+    email: "moncef.benouniche@gmail.com",
     city: "Alger, Algérie",
   },
   common: {
@@ -593,7 +593,7 @@ const en: Dict = {
     whatsapp: "WhatsApp",
     role: "Violinist · Teacher · Actor",
     emailLabel: "Email",
-    email: "contact@moncefbenouniche.com",
+    email: "moncef.benouniche@gmail.com",
     city: "Algiers, Algeria",
   },
   common: {
@@ -879,7 +879,7 @@ const ar: Dict = {
     whatsapp: "واتساب",
     role: "عازف كمان · أستاذ · ممثل",
     emailLabel: "البريد الإلكتروني",
-    email: "contact@moncefbenouniche.com",
+    email: "moncef.benouniche@gmail.com",
     city: "الجزائر العاصمة، الجزائر",
   },
   common: {

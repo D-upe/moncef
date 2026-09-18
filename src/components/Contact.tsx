@@ -42,10 +42,17 @@ export default function Contact() {
     const data = new FormData(e.currentTarget);
     const name = String(data.get("nom") ?? "").trim();
     const reach = String(data.get("contact") ?? "").trim();
+    const type = String(data.get("type") ?? "").trim();
+    const message = String(data.get("message") ?? "").trim();
     if (!name || !reach) {
       setError(c.contact.error);
       return;
     }
+    const subject = encodeURIComponent(`Nouveau contact — ${name}${type ? ` (${type})` : ""}`);
+    const body = encodeURIComponent(
+      `Nom: ${name}\nContact: ${reach}${type ? `\nType: ${type}` : ""}${message ? `\n\nMessage:\n${message}` : ""}`,
+    );
+    window.location.href = `mailto:moncef.benouniche@gmail.com?subject=${subject}&body=${body}`;
     setError(null);
     setSent(true);
   };
