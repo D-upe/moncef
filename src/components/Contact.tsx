@@ -32,8 +32,8 @@ export default function Contact() {
     {
       icon: InstagramIcon,
       label: c.contact.labels.instagram,
-      value: "@moncef.benouniche",
-      href: "https://www.instagram.com/moncef.benouniche",
+      value: "@violoniste_moncef",
+      href: "https://www.instagram.com/violoniste_moncef",
     },
   ];
 

@@ -144,7 +144,7 @@ export default function Hero() {
                   {c.hero.ctaPrimary}
                 </a>
                 <a
-                  href="https://www.instagram.com/moncef.benouniche"
+                  href="https://www.instagram.com/violoniste_moncef"
                   target="_blank"
                   rel="noreferrer noopener"
                   className="btn rounded-full border border-foil/40 px-8 py-4 text-[0.71rem] font-semibold tracking-[0.21em] text-paper uppercase backdrop-blur-sm hover:border-foil hover:bg-paper hover:text-lacquer"

@@ -241,7 +241,7 @@ export default function Nav() {
                   {c.nav.phone}
                 </a>
                 <a
-                  href="https://www.instagram.com/moncef.benouniche"
+                  href="https://www.instagram.com/violoniste_moncef"
                   target="_blank"
                   rel="noreferrer noopener"
                   className="flex items-center gap-2 text-[0.72rem] font-medium tracking-[0.22em] text-gold-deep uppercase"

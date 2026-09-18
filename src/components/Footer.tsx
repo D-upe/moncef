@@ -61,7 +61,7 @@ export default function Footer() {
                   label: c.footer.call,
                 },
                 {
-                  href: "https://www.instagram.com/moncef.benouniche",
+                  href: "https://www.instagram.com/violoniste_moncef",
                   Icon: InstagramIcon,
                   label: c.nav.instagram,
                 },
@@ -187,7 +187,7 @@ export default function Footer() {
             </p>
             <div className="flex flex-wrap items-center gap-x-7 gap-y-3">
               <a
-                href="https://www.instagram.com/moncef.benouniche"
+                href="https://www.instagram.com/violoniste_moncef"
                 target="_blank"
                 rel="noreferrer noopener"
                 className="text-[0.715rem] tracking-[0.14em] text-sand/85 uppercase transition-colors hover:text-ink"
