@@ -45,3 +45,7 @@ Thumbs.db
 # Local media originals (source of truth stays in Drive)
 originals/
 .astro/
+public/media/videos/*.MOV
+public/media/videos/*.mov
+public/media/videos/VIDEO*
+
