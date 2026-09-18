@@ -298,9 +298,35 @@ const musicianJsonLd = {
 
       .hero {
         position: relative;
-        padding: 6rem 0 4rem;
+        padding: 0;
         text-align: center;
         overflow: hidden;
+        min-height: 100vh;
+      }
+      .hero-bg {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 0;
+      }
+      .hero-bg::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(10,10,11,0.55) 0%, rgba(10,10,11,0.75) 100%);
+        pointer-events: none;
+      }
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 6rem 1.5rem 4rem;
       }
       .hero-particles .particle:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 7s; }
       .hero-particles .particle:nth-child(2) { left: 25%; animation-delay: 1.2s; animation-duration: 9s; }
