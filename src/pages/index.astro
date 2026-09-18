@@ -47,7 +47,7 @@ const faqJsonLd = {
 const heroJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'ImageObject',
-  contentUrl: 'https://www.ohala.qd.je/media/pictures/hero-violin.svg',
+  contentUrl: 'https://ohala.qd.je/media/pictures/hero-violin.svg',
   name: 'Moncef Benouniche — Violoniste à Alger',
   description: 'Violoniste professionnel à Alger, Premier Prix Conservatoire d\'El Biar',
 };
@@ -56,18 +56,22 @@ const heroJsonLd = {
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <main class="wrap">
     <div class="hero">
+      <div class="hero-particles" aria-hidden="true">
+        <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+        <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+      </div>
       <p class="eyebrow">
         <span class="ornament"><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span></span>
         VIOLONISTE · PROFESSEUR · ACTEUR — ALGER
         <span class="ornament"><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span></span>
       </p>
       <div class="hero-img reveal stagger-1">
-        <img src="/media/pictures/hero-violin.svg" alt="Moncef Benouniche — Violoniste à Alger" width="800" height="400" />
+        <img src="/media/pictures/landbackground.jpg" alt="Moncef Benouniche — Violoniste à Alger" width="800" height="400" />
       </div>
       <h1 class="reveal stagger-1">Moncef Benouniche, <em>violoniste à Alger</em></h1>
       <div class="rule reveal stagger-2"></div>
       <p class="lede reveal stagger-3">
-        Premier Prix de musique classique (Conservatoire d’El Biar, 2011–2024). Prestations pour
+        Premier Prix de musique classique (Conservatoire d'El Biar, 2011–2024). Prestations pour
         mariages, événements privés et séminaires — répertoire classique, moderne et international.
         Professeur chez YAMAHA Algérie &amp; MELTIN ART. Acteur (série FATMA).
       </p>
@@ -94,7 +98,7 @@ const heroJsonLd = {
     <section class="block" id="video" aria-labelledby="t-video">
       <h2 id="t-video"><span class="n">05 ·</span> En image &amp; en musique</h2>
       <div class="grid reveal stagger-2">
-        <div class="card"><VideoPlayer src="/media/videos/placeholder.mp4" poster="/media/pictures/video-thumb.svg" title="Prestation — Opéra d'Alger" /></div>
+        <div class="card"><VideoPlayer src="/media/videos/presentation.mp4" poster="/media/pictures/video-thumb.svg" title="Prestation — Opéra d'Alger" /></div>
         <div class="card"><ImageCard src="/media/pictures/card-placeholder.svg" alt="Performance scénique" width="400" height="250" /><h3>Scènes majeures</h3><p>Opéra d'Alger, TEDx, Union Européenne — captations et live.</p></div>
       </div>
     </section>
@@ -124,7 +128,7 @@ const heroJsonLd = {
         <div class="card"><img src="/media/pictures/card-placeholder.svg" alt="UGC" width="400" height="250" /><h3>UGC &amp; marques</h3><p>Macir Vie, Barbacane, Leopard.</p></div>
       </div>
       <div class="reveal stagger-2" style="margin-top:1.25rem;">
-        <VideoPlayer src="/media/videos/placeholder.mp4" poster="/media/pictures/video-thumb.svg" title="Extrait — Série FATMA" />
+        <VideoPlayer src="/media/videos/presentation.mp4" poster="/media/pictures/video-thumb.svg" title="Extrait — Série FATMA" />
       </div>
     </section>
 

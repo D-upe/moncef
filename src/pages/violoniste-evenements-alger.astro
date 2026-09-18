@@ -34,8 +34,8 @@ const crumbs = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.ohala.qd.je/' },
-    { '@type': 'ListItem', position: 2, name: 'Événements Alger', item: 'https://www.ohala.qd.je/violoniste-evenements-alger/' },
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://ohala.qd.je/' },
+    { '@type': 'ListItem', position: 2, name: 'Événements Alger', item: 'https://ohala.qd.je/violoniste-evenements-alger/' },
   ],
 };
 
@@ -45,8 +45,12 @@ const crumbs = {
   <script type="application/ld+json" set:html={JSON.stringify(crumbs)} />
   <main class="wrap">
     <div class="hero">
+      <div class="hero-particles" aria-hidden="true">
+        <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+        <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+      </div>
       <p class="eyebrow">ÉVÉNEMENTS — ALGER &amp; ALGÉRIE</p>
-      <div class="hero-img reveal stagger-1"><img src="/media/pictures/hero-violin.svg" alt="Violoniste pour événements à Alger" width="800" height="400" /></div>
+      <div class="hero-img reveal stagger-1"><img src="/media/pictures/landbackground.jpg" alt="Violoniste pour événements à Alger" width="800" height="400" /></div>
       <h1 class="reveal stagger-2">Violoniste pour <em>événements à Alger</em></h1>
       <div class="rule reveal stagger-3"></div>
       <p class="lede reveal stagger-4">
@@ -67,7 +71,7 @@ const crumbs = {
     <section class="block">
       <h2><span class="n">02 ·</span> En vidéo</h2>
       <div class="reveal stagger-2">
-        <VideoPlayer src="/media/videos/placeholder.mp4" poster="/media/pictures/video-thumb.svg" title="Extrait — Opéra d'Alger" />
+        <VideoPlayer src="/media/videos/presentation.mp4" poster="/media/pictures/video-thumb.svg" title="Extrait — Opéra d'Alger" />
       </div>
       <dl class="faq">
         <dt>Séminaires d'entreprise ?</dt><dd>Oui, formule adaptée au programme.</dd>

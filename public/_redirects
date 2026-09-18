@@ -1,0 +1,2 @@
+# Redirect www to apex
+www.ohala.qd.je/* https://ohala.qd.je/:splat 301

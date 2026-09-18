@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.ohala.qd.je/sitemap-index.xml
+Sitemap: https://ohala.qd.je/sitemap-index.xml

@@ -12,8 +12,8 @@ const crumbs = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.ohala.qd.je/' },
-    { '@type': 'ListItem', position: 2, name: 'Acteur', item: 'https://www.ohala.qd.je/acteur/' },
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://ohala.qd.je/' },
+    { '@type': 'ListItem', position: 2, name: 'Acteur', item: 'https://ohala.qd.je/acteur/' },
   ],
 };
 ---
@@ -21,8 +21,12 @@ const crumbs = {
   <script type="application/ld+json" set:html={JSON.stringify(crumbs)} />
   <main class="wrap">
     <div class="hero">
+      <div class="hero-particles" aria-hidden="true">
+        <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+        <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+      </div>
       <p class="eyebrow">ÉCRAN — ALGER</p>
-      <div class="hero-img reveal stagger-1"><img src="/media/pictures/hero-violin.svg" alt="Moncef Benouniche — Acteur" width="800" height="400" /></div>
+      <div class="hero-img reveal stagger-1"><img src="/media/pictures/landbackground.jpg" alt="Moncef Benouniche — Acteur" width="800" height="400" /></div>
       <h1 class="reveal stagger-2">Acteur <em>&amp; créateur UGC</em></h1>
       <div class="rule reveal stagger-3"></div>
       <p class="lede reveal stagger-4">
@@ -44,7 +48,7 @@ const crumbs = {
     <section class="block">
       <h2><span class="n">02 ·</span> Extraits &amp; captures</h2>
       <div class="grid reveal stagger-2">
-        <div class="card"><VideoPlayer src="/media/videos/placeholder.mp4" poster="/media/pictures/video-thumb.svg" title="Extrait — Série FATMA" /></div>
+        <div class="card"><VideoPlayer src="/media/videos/presentation.mp4" poster="/media/pictures/video-thumb.svg" title="Extrait — Série FATMA" /></div>
         <div class="card"><ImageCard src="/media/pictures/card-placeholder.svg" alt="Behind the scenes" width="400" height="250" /><h3>Behind the scenes</h3><p>Coulisses des tournages et des projets UGC.</p></div>
       </div>
     </section>
